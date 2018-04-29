@@ -1,4 +1,4 @@
-# mybupkey variable has to be defined as environment variable (eg: export TF_VAR_mypubkey=$(cat ~/.ssh/id_rsa.pub))
+// mybupkey variable defined as environment variable (eg: export TF_VAR_mypubkey=$(cat ~/.ssh/id_rsa.pub))
 
 module "ec2inst" {
   source = "../../modules/ec2"
