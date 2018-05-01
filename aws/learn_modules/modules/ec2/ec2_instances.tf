@@ -21,7 +21,7 @@ resource "aws_instance" "ubuntu" {
     connection {
       type        = "ssh"
       user        = "ubuntu"
-      private_key = "${file("/Users/cipcirip/.ssh/id_rsa")}"
+      private_key = "${file("~/.ssh/id_rsa")}"
     }
   }
 
@@ -36,7 +36,7 @@ resource "aws_instance" "ubuntu" {
     connection {
       type        = "ssh"
       user        = "ubuntu"
-      private_key = "${file("/Users/cipcirip/.ssh/id_rsa")}"
+      private_key = "${file("~/.ssh/id_rsa")}"
     }
   }
 }
