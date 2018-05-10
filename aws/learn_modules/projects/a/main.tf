@@ -4,6 +4,7 @@ module "ec2inst" {
   source = "../../modules/ec2"
 
   #instance_type      = "t2.micro"
-  #ami                = "ami-f4f21593"
+  ami                = "ami-7c1bfd1b"
+  instance_name      = "redhat_machine"
   mypubkey = "${var.mypubkey}"
 }

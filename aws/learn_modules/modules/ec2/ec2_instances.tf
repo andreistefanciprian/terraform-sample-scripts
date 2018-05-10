@@ -1,5 +1,5 @@
 //Create EC2 instances
-resource "aws_instance" "ubuntu" {
+resource "aws_instance" "linux" {
   ami           = "${var.ami}"
   instance_type = "${var.instance_type}"
   key_name      = "${var.key_name}"
@@ -10,6 +10,8 @@ resource "aws_instance" "ubuntu" {
 
   security_groups = ["${aws_security_group.allow_traffic.name}"]
 
+/*
+# provisioners configured for ubuntu
   provisioner "remote-exec" {
     inline = [
       "sudo apt-get -y update",
@@ -26,12 +28,12 @@ resource "aws_instance" "ubuntu" {
   }
 
   provisioner "local-exec" {
-    command = "echo ${aws_instance.ubuntu.public_ip} >> ip_addresses.txt"
+    command = "echo ${aws_instance.linux.public_ip} >> ip_addresses.txt"
   }
 
   provisioner "file" {
     source      = "ip_addresses.txt"
-    destination = "/home/ubuntu/ip_addresses_copy.txt"
+    destination = "~/ip_addresses_copy.txt"
 
     connection {
       type        = "ssh"
@@ -39,6 +41,8 @@ resource "aws_instance" "ubuntu" {
       private_key = "${file("~/.ssh/id_rsa")}"
     }
   }
+*/
+
 }
 
 

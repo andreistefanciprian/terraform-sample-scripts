@@ -17,7 +17,9 @@ variable "sec_group_name" {
 }
 
 variable "instance_name" {
-  default = "ubuntu-machine"
+  default = "linux-machine"
 }
 
 variable "mypubkey" {}
+
+

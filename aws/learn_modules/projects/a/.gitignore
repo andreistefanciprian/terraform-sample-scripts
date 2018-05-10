@@ -2,3 +2,4 @@
 /terraform.tfstate
 /.terraform
 /ip_addresses.txt
+/backend.tf
