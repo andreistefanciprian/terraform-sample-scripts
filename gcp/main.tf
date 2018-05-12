@@ -59,7 +59,7 @@ module "deploy-instance" {
 
 // Add Instances
 resource "google_compute_instance" "ubuntu" {
-  count        = 1
+  count        = 2
   name         = "${var.name}-ubuntu-${count.index + 1}"
   machine_type = "f1-micro"
   zone         = "${var.region1_zone_1}"
