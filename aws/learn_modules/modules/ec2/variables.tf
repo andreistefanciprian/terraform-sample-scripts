@@ -9,7 +9,7 @@ variable "ami" {
 }
 
 variable "key_name" {
-  default = "cips-key"
+  default = "cips-public-key"
 }
 
 variable "sec_group_name" {
@@ -17,7 +17,7 @@ variable "sec_group_name" {
 }
 
 variable "instance_name" {
-  default = "linux-machine"
+  default = "ubuntu-machine"
 }
 
 variable "mypubkey" {}
